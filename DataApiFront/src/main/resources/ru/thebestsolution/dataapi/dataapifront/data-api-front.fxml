@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="358.0" prefWidth="648.0" spacing="20.0" style="-fx-background-color: #3C3F41;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.thebestsolution.dataapi.dataapifront.HelloController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+
+  <Label fx:id="welcomeText" text="Сервис для проверки преобразования данных для модели" textFill="#d9d9d9">
+      <font>
+         <Font size="19.0" />
+      </font>
+      <VBox.margin>
+         <Insets bottom="50.0" />
+      </VBox.margin></Label>
+   <VBox>
+      <children>
+         <Label text="Выберите исходные файлы" textFill="#d9d9d9" />
+         <HBox prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <TextArea fx:id="chosenFilesTextArea" editable="false">
+                  <padding>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+                  <HBox.margin>
+                     <Insets bottom="5.0" right="5.0" top="5.0" />
+                  </HBox.margin></TextArea>
+               <VBox>
+                  <children>
+                     <Button fx:id="chooseFileButton" mnemonicParsing="false" onAction="#onChooseFileButtonClick" style="-fx-background-color: #808080;" text="Обзор" textFill="#d9d9d9">
+                        <VBox.margin>
+                           <Insets top="10.0" />
+                        </VBox.margin></Button>
+                     <Button fx:id="transferButton" mnemonicParsing="false" onAction="#onTransferButtonClick" style="-fx-background-color: #808080;" text="Преобразовать" textFill="#d9d9d9">
+                        <VBox.margin>
+                           <Insets top="5.0" />
+                        </VBox.margin></Button>
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+         <VBox>
+            <children>
+               <Label text="Результат преобразования" textFill="#d9d9d9" />
+               <Label fx:id="statusLabel" text="Статус" textFill="#d9d9d9" />
+            </children>
+         </VBox>
+      </children>
+   </VBox>
+  <Button fx:id="getResultButton" onAction="#onGetResultButtonClick" style="-fx-background-color: #808080;" text="Получить результат" textFill="#d9d9d9" />
+</VBox>
